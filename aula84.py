@@ -74,8 +74,8 @@ print(*novos_produtos, sep='\n')
 # for maior que 20 
 novos_produtos = [
     {**produto, 'preco': produto['preco'] * 1.05} 
-    if produto['preco'] > 20 else {**produto} # if ternário
-    for produto in produtos
+    if produto['preco'] > 20 else {**produto} # if ternário, tem else
+    for produto in produtos # um if depois desse for não teria else, seria um filtro
 ] 
 print(*novos_produtos, sep='\n')
 
@@ -85,5 +85,23 @@ print(*novos_produtos, sep='\n')
 ###############################################################################################################################################################
 # Filtro de dados em List comprehension(filter)
 
+print('Filtro de dados')
+lista = [n for n in range(10)
+        if n < 5] # filtro
+print(lista)
 
+produtos = [
+    {'nome': 'p1', 'preco': 20},
+    {'nome': 'p2', 'preco': 10},
+    {'nome': 'p3', 'preco': 30},
+]
 
+# à esquerda do for -> mapeamento; à direita -> filtro
+novos_produtos = [
+    {**produto, 'preco': produto['preco'] * 1.05} # mapeamento
+    if produto['preco'] > 20 else {**produto} # mapeamento
+    for produto in produtos # mapeamento
+    if produto['preco'] > 10 # filtro
+] 
+
+p(novos_produtos)
