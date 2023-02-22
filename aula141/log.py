@@ -28,7 +28,7 @@ class LogFileMixin(Log):
     # que podem não ser dessa família
     def _log(self, msg): # se está sobrepondo um método, assinaturas devem ser IGUAIS
         print(msg)
-        msg_formatada = f'{msg} {self.__class__.__name__}'
+        msg_formatada = f'{msg} ({self.__class__.__name__})'
         print(f'Salvando: {msg_formatada}')
         with open(LOG_FILE, 'a') as arquivo:
             arquivo.write(msg_formatada)
@@ -46,10 +46,10 @@ class LogPrintMixin(Log):
 
 if __name__ == '__main__':
     lp = LogPrintMixin()
-    lp.log_error('Qualquer coisa')
-    lp.log_success('Deu bom')
+    lp.log_error('Mensagem de erro do LogPrint')
+    lp.log_success('Mensagem de sucesso LogPrint')
 
     lf = LogFileMixin()
-    lf.log_error('outra coisa')
-    lf.log_success('que legal')
+    lf.log_error('Mensagem de erro do LogFile')
+    lf.log_success('Sucesso LogFile')
     # print(LOG_FILE)

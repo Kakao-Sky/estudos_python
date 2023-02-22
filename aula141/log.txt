@@ -11,3 +11,5 @@ Error: iPhone está desligado Smartphone
 Error: iPhone está desligado Smartphone
 Success: iPhone está ligado Smartphone
 Error: Galaxy S está desligado Smartphone
+Error: Mensagem de erro do LogFile (LogFileMixin)
+Success: Sucesso LogFile (LogFileMixin)
