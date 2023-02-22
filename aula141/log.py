@@ -44,7 +44,7 @@ class LogPrintMixin(Log):
 
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': # ele só vai executar o que está abaixo se a tentativa de execução for feita dentro deste próprio módulo (que pra ele é __main__)
     lp = LogPrintMixin()
     lp.log_error('Mensagem de erro do LogPrint')
     lp.log_success('Mensagem de sucesso LogPrint')
