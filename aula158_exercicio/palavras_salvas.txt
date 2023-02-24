@@ -1,0 +1,6 @@
+[
+  "paralelepípedo",
+  "ornitorrinco",
+  "mamífero",
+  "catavento"
+]
